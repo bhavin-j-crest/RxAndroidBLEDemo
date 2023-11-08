@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gutter_margin">16dp</dimen>
+    <dimen name="radius_margin">10dp</dimen>
+    <dimen name="external_margin">15dp</dimen>
+    <dimen name="internal_margin">10dp</dimen>
+
+    <dimen name="title_text">20sp</dimen>
+    <dimen name="subtitle_text">15sp</dimen>
+
+
+</resources>
