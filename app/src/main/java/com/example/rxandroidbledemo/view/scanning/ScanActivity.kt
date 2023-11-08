@@ -42,7 +42,7 @@ class ScanActivity : BaseActivity<ActivityScanBinding>(R.layout.activity_scan) {
 
     override fun init() {
         configureResultList()
-        onScanToggleClick()
+//        startScanning()
     }
 
     private fun configureResultList() {
@@ -59,7 +59,7 @@ class ScanActivity : BaseActivity<ActivityScanBinding>(R.layout.activity_scan) {
         }
     }
 
-    private fun onScanToggleClick() {
+    private fun startScanning() {
         if (isScanning) {
             scanDisposable?.dispose()
         } else {
@@ -121,6 +121,11 @@ class ScanActivity : BaseActivity<ActivityScanBinding>(R.layout.activity_scan) {
         super.onPause()
         // Stop scanning in onPause callback.
         if (isScanning) scanDisposable?.dispose()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        startScanning()
     }
 
 }
